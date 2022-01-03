@@ -1,5 +1,6 @@
 import pygame
 from g_list import draw_list
+from benchmark import display_stats
 
 pygame.init()
 
@@ -21,6 +22,11 @@ def draw(draw_info, algo_name, ascending):
         "I - Insertion Sort | B - Bubble Sort | H - Heap Sort | S - Shell Sort", 1, draw_info.BLACK)
     draw_info.window.blit(
         sorting, (draw_info.width/2 - sorting.get_width()/2, 65))
+
+    #benchmark = draw_info.FONT.render(
+    #    f"{display_stats()}", 1, draw_info.BLACK)
+    #draw_info.window.blit(
+    #    benchmark, (draw_info.width/2 - sorting.get_width()/2, 90))
 
     draw_list(draw_info)
     pygame.display.update()

@@ -6,6 +6,8 @@ from insert_sort import insertion_sort
 from list_gen import generate_starting_list
 from h_sort import heap_sort
 from s_sort import shell_sort
+from q_sort import quick_sort
+
 pygame.init()
 
 
@@ -46,7 +48,9 @@ def main():
                 sorting = False
             elif event.key == pygame.K_SPACE and sorting == False:
                 sorting = True
+                
                 sorting_algo_gen = sorting_algo(draw_info, ascending)
+                
             elif event.key == pygame.K_a and not sorting:
                 ascending = True
             elif event.key == pygame.K_d and not sorting:
@@ -63,6 +67,9 @@ def main():
             elif event.key == pygame.K_s and not sorting:
                 sorting_algo = shell_sort
                 sorting_algo_name = "Shell Sort"
+            #elif event.key == pygame.K_q and not sorting:
+            #    sorting_algo = quick_sort
+            #    sorting_algo_name = "Quick Sort"
 
     pygame.quit()
 

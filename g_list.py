@@ -30,7 +30,7 @@ def draw_list(draw_info, color_positions={}, clear_bg=False):
                          (x, y, draw_info.block_width, (val - draw_info.min_value) * draw_info.block_height))
         num_text = font_name.render(str(val), True, draw_info.NUM_COLOR)
         draw_info.window.blit(
-            num_text, (x, y, draw_info.block_width, draw_info.height))
+            num_text, (x, y-15, draw_info.block_width, draw_info.height))
 
     if clear_bg:
         pygame.display.update()
